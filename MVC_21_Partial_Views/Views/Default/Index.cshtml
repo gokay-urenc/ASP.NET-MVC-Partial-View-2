@@ -1,0 +1,33 @@
+﻿@model List<MVC_21_Partial_Views.Models.Urun>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="panel panel-danger">
+    <div class="panel-heading">En Çok Satan Ürünler</div>
+    @Html.Partial("_Tasarimim", Model)
+</div>
+
+    <hr />
+
+<div class="panel panel-danger">
+    <div class="panel-heading">En Ucuz Ürünler</div>
+    @Html.Partial("_Tasarimim", Model)
+</div>
+
+<hr />
+
+@Html.Partial("_Tasarimim", Model)
+
+Index'te sabit olan yazıdır.
+
+    <hr style="border-color:darkred" />
+    <br />
+
+<div class="row">
+    <div class="col-md-4 col-lg-4">@Html.Partial("_Tasarimim", Model)</div>
+    <div class="col-md-4 col-lg-4">@Html.Partial("_Tasarimim", Model)</div>
+    <div class="col-md-4 col-lg-4">@Html.Partial("_Tasarimim", Model)</div>
+</div>

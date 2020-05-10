@@ -1,0 +1,21 @@
+﻿<!-- Partial View'in HTML'i temiz olmalıdır. Parça olarak temel bir sayfaya çağrılacağı için temiz olmalıdır. Yani çağrıldığı sayfada bir bütün olacaktır ve   asla tek başına çalıştırılamazlar. -->
+
+@model List<MVC_21_Partial_Views.Models.Urun>
+
+<div class="panel-body">
+    <h3>
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                   <a href="@item.resimYolu" target="_blank">
+                   <img src="@item.resimYolu" alt="Lights" style="width:100%">
+                   <div class="caption">
+                      <p>@item.ad ------ @item.fiyat</p>
+                   </div>
+                   </a>
+                </div>
+             </div>
+         }
+    </h3>
+</div>
